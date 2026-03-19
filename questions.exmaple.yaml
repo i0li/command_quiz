@@ -1,0 +1,20 @@
+- q: Show a list of files in the current directory
+  a: ls
+
+- q: Display the current working directory path
+  a: pwd
+
+- q: Copy a file (copy file1 to file2)
+  a: cp file1 file2
+
+- q: Create a directory named "test"
+  a: mkdir test
+
+- q: Display the contents of a file (file.txt)
+  a: cat file.txt
+
+- q: Show all running processes
+  a: ps aux
+
+- q: Search for the string "error" in log.txt
+  a: grep "error" log.txt

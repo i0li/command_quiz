@@ -1,5 +1,0 @@
-#- q: /usecaseディレクトリは以下で、origin/mainにはなくてfeature/apiにあるコミットメッセージのみを表示
-#  a: git log --oneline origin/main..feature/api -- /usecase
-
-- q: 現在動いているコンテナの一覧を表示する
-  a: docker ps -a
