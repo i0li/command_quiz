@@ -18,7 +18,7 @@ cd command-quiz
 ### 2. Setup configuration
 
 ```bash
-cp config.env.example config.env
+cp config.example.env config.env
 cp questions.example.yaml questions.yaml
 ```
 
