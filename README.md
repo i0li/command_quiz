@@ -4,6 +4,16 @@ A simple CLI tool that randomly shows command-line quiz questions at intervals.
 
 ---
 
+## 📦 Dependencies
+
+This tool requires the following:
+
+### yq (YAML parser)
+- **Install**: `brew install yq`
+- **Check**: `yq --version`
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
