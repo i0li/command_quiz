@@ -27,7 +27,15 @@ while true; do
 
   log RUN "🎯 Starting quiz..."
 
-  OUTPUT=$(osascript "$DIR/quiz_runner.applescript" 2>&1)
+  # 質問をランダムに選択
+  QUESTIONS_FILE="$DIR/questions.yaml"
+  QUESTION_COUNT=$(yq eval 'length' "$QUESTIONS_FILE")
+  RANDOM_INDEX=$((RANDOM % QUESTION_COUNT))
+  QUESTION=$(yq eval ".[$RANDOM_INDEX].q" "$QUESTIONS_FILE")
+  ANSWER=$(yq eval ".[$RANDOM_INDEX].a" "$QUESTIONS_FILE")
+
+  # AppleScriptに渡す
+  OUTPUT=$(osascript "$DIR/quiz_runner.applescript" "$QUESTION" "$ANSWER" 2>&1)
   STATUS=$?
 
   if [ $STATUS -eq 0 ]; then
